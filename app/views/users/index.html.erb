@@ -1,0 +1,14 @@
+<h1>Welcome to the User service</h1>
+<h3>Playing around with Rails forms</h3>
+<p><a href="<%= new_user_path %>">Create new User</a></p>
+
+<div class="users-list">
+  <% @users.each do |user| %>
+    <div class="user-item">
+      <p><strong>Username:</strong> <%= user.username %></p>
+      <p><strong>Email:</strong> <%= user.email %></p>
+      <p><a href="<%= edit_user_path(user) %>">Edit User</a></p>
+    </div>
+    <hr>
+  <% end %>
+</div>

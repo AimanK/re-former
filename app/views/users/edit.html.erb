@@ -1,0 +1,33 @@
+<div></div>
+    <h1>Edit User</h1>
+</div>
+
+<%= form_with model: @user do |form| %>
+<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+<div>
+    <%= form.label "Username:" %>
+    <%= form.text_field :username %>
+</div>
+<br>
+
+<div>
+    <%=form.label "Email:" %>
+    <%= form.text_field :email, placeholder: "JohnDoe@gmail.com" %>
+</div>
+<br>
+
+<div>
+    <%= form.label "Password:" %>
+    <%= form.text_field :password, placeholder: "*******" %>
+</div>
+<br>
+
+
+<div>
+    <%= link_to "back", root_path %>
+</div>
+<div>
+    <%= form.submit "Update" %>
+</div>
+  <% end %>
